@@ -1,39 +1,91 @@
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="8dp"
-    app:cardCornerRadius="5dp"
-    app:cardElevation="4dp"
-    android:padding="16dp">
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="?attr/colorSurface"
+    app:cardElevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:padding="12dp">
 
-        <TextView
-            android:id="@+id/skill_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
+        <ImageView
+            android:id="@+id/skill_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_skill" />
 
-        <TextView
-            android:id="@+id/skill_category"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:textColor="@color/black"
-            android:layout_marginTop="4dp"/>
 
-        <TextView
-            android:id="@+id/skill_cost"
-            android:layout_width="wrap_content"
+
+
+        <!-- Skill Info -->
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:textColor="@color/blue"
-            android:layout_marginTop="8dp"/>
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/skill_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Java Programming"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSurface"/>
+
+            <TextView
+                android:id="@+id/skill_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coding"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:textColor="?attr/colorOnSurface"/>
+
+            <TextView
+                android:id="@+id/skill_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I will help debug your Java code efficiently."
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textSize="14sp"
+                android:textColor="?attr/colorOnSurface"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Credits & Availability -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/skill_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100 Credits"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFA500"/>
+
+            <TextView
+                android:id="@+id/availability_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available"
+                android:textSize="14sp"
+                android:textColor="#00FF00"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
     </LinearLayout>
-</com.google.android.material.card.MaterialCardView>
+</androidx.cardview.widget.CardView>
